@@ -10,13 +10,14 @@
     "@uppy/react": "^1.3.0",
     "aws-sdk": "^2.604.0",
     "axios": "^0.19.1",
+    "concurrently": "^6.2.1",
     "dotenv": "^8.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
   },
   "scripts": {
-    "start": "node server/server.js",
+    "start": "concurrently \"node server/server.js\" \"react-scripts start\"",
     "client": "react-scripts start",
     "server": "nodemon  --watch server server/server.js",
     "build": "react-scripts build",
